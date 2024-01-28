@@ -11,12 +11,41 @@
       <form action="">
         <h2>LOGIN</h2>
 
-        <input placeholder="Name" type="text" />
+        <input id="nameInput" placeholder="Name" type="text" />
 
-        <input placeholder="Email" type="email" />
-        <input placeholder="Password" type="password" />
-        <button>SUBMIT</button>
+        <input id="emailInput" placeholder="Email" type="email" />
+        <input id="passwordInput" placeholder="Password" type="password" />
+        <button id="submitButton">SUBMIT</button>
       </form>
     </main>
+
+    <script>
+        var nameInput=document.getElementById('nameInput')
+        var emailInput=document.getElementById('emailInput')
+        var passwordInput=document.getElementById('passwordInput')
+        var submitButton=document.getElementById('submitButton')
+         
+        function handleFocus() {
+        nameInput.style.borderColor = 'black';
+        emailInput.style.borderColor = 'black';
+        passwordInput.style.borderColor = 'black';
+      }
+      function handleBlur() {
+        nameInput.style.borderColor = '';
+        emailInput.style.borderColor = '';
+        passwordInput.style.borderColor = '';
+      }
+
+      nameInput.addEventListener('focus', handleFocus);
+      nameInput.addEventListener('blur',handleBlur)
+      emailInput.addEventListener('focus', handleFocus);
+      emailInput.addEventListener('blur',handleBlur)
+      passwordInput.addEventListener('focus', handleFocus);
+      passwordInput.addEventListener('blur',handleBlur)
+
+        submitButton.addEventListener('click',function(){
+            submitButton.innerText='Submiting'
+        })
+    </script>
   </body>
 </html>
