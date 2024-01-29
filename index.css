@@ -14,7 +14,7 @@ form{
     flex-direction: column;
 background-color: rgb(2, 136, 176);
     height: 450px;
-    width: 50%;
+    width: 400px;
     margin-top: 2rem;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -27,7 +27,7 @@ form h2{
 
 }
 form input{
-   width: 300px;
+   width: 90%;
    height: 40px;
    border-radius: 12px;
    border: 0;
@@ -49,4 +49,11 @@ form button:hover{
     background-color: rgb(2, 136, 176) ;
     color: white;
 
+}
+@media(max-width:400px){
+    form{
+        width: 100%;
+        border-radius: 0;
+        margin-top: -2rem;
+    }
 }
